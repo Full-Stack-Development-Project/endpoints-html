@@ -1,0 +1,28 @@
+.form
+{
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    display: flex;
+}
+
+.search_bar
+{
+    padding: 20px;
+    margin-left: 20%;
+    text-align: center;
+    width: 80%;
+    
+}
+
+.Search_header
+{
+    padding: 10px;
+    text-align: center;
+}
+
+.search_button
+{
+    padding: 20px;
+    text-align: center;
+}
