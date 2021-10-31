@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <style>
+            td{
+                width: 40%;
+                padding-right: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="nav nav-tabs" style="background-color:blanchedalmond;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./home.html">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./search.html">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="create.html">My Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log Out</a>
+            </li>
+          </ul>
+        <form>
+            <div class="mb-3" style="width: 20%;">
+              <label for="exampleInputEmail1" class="form-label">First Name</label>
+              <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <span class="mb-3" style="position: absolute; top: 6%;right: 58%; width: 20%;">
+                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </span>
+            <span class="mb-3" style="position: absolute; top: 6%;right: 35%; width: 20%;">
+                <label for="exampleInputEmail1" class="form-label">Add Image</label>
+                <input class="form-control" type="file" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </span>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" >Email address</label>
+                <input type="email" class="form-control"style="width: 20%;" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <span class="mb-3" style="position: absolute; top: 17.8%;right: 58%; width: 20%;">
+                <label for="exampleInputEmail1" class="form-label">Contact Number</label>
+                <input class="form-control" id="exampleInputEmail1" type="number" aria-describedby="emailHelp">
+            </span>
+              <div class="mb-3" style="width: 20%;">
+                <label for="exampleInputEmail1" class="form-label">10th School</label>
+                <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <span class="mb-3" style="position: absolute; top: 33%;right: 58%; width: 20%;">
+                  <label for="exampleInputEmail1" class="form-label">Percentage</label>
+                  <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </span>
+              <div class="mb-3" style="width: 20%;">
+                <label for="exampleInputEmail1" class="form-label">12th School</label>
+                <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <span class="mb-3" style="position: absolute; top: 45%;right: 58%; width: 20%;">
+                  <label for="exampleInputEmail1" class="form-label">Percentage</label>
+                  <input type="number"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </span>
+              <div class="mb-3" style="width: 20%;">
+                <label for="exampleInputEmail1" class="form-label">College</label>
+                <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <span class="mb-3" style="position: absolute; top: 57%;right: 58%; width: 20%;">
+                  <label for="exampleInputEmail1" class="form-label">CGPA</label>
+                  <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </span>
+              <button class="btn btn-success" style="margin:20px">+Add Education</button>
+              <h3>Skills</h3>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Skill</label>
+              <input  class="form-control" id="exampleInputPassword1">
+              <button class="btn btn-success" style="margin:20px">+Add Skill</button>
+            </div>
+            <h3>Projects</h3>
+            <div class="mb-3">
+                <table>
+                    <tr>
+                        <td>
+                <label for="exampleInputPassword1" class="form-label">Project Name</label>
+                        </td>
+                        <td>
+                            <label for="exampleInputEmail1" class="form-label">Description</label>
+                        </td>
+                        <td>
+                            <label for="exampleInputEmail1" class="form-label">Project URL</label>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input  class="form-control" id="exampleInputPassword1">
+                            </td>
+                            <td>
+                                <textarea rows="4" cols="50" class="form-control" id="exampleInputEmail1" placeholder="give a small Description of 2-4 sentences highlighting your project"></textarea>
+                            </td>
+                            <td>
+                                <input  class="form-control" id="exampleInputPassword1">
+                            </td>
+                        </tr>
+                        </table>
+                        <button class="btn btn-success" style="margin:20px">+Add Project</button>
+              </div>
+              <h3>Social Media</h3>
+              <table>
+                  <tr>
+                      <td>
+                        <label for="exampleInputEmail1" class="form-label">Platform</label>
+                      </td>
+                      <td>
+                        <label for="exampleInputEmail1" class="form-label">Profile URL</label>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                    <input  class="form-control" id="exampleInputPassword1">
+                    </td>
+                    <td>
+                        <input  class="form-control" id="exampleInputPassword1">
+                    </td>
+                  </tr>
+              </table>
+              <button class="btn btn-success" style="margin:20px">+Add Platform</button>
+              <div class="mb-3 form-check" style="margin-top: 50px;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">I agree that all the information stated is true</label>
+              </div>
+            <h3><a href="upload.html">Already have a Resume? Upload it Here</a></h3>
+            <button type="submit" style="margin-top: 20px;" class="btn btn-primary">Submit</button>
+          </form>
+    </body>
+</html>
