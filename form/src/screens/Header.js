@@ -29,14 +29,26 @@ function Header() {
         <div>
             <AppBar position="absolute" color="default" className={classes.appBar}>
                 <Toolbar>
+                {
+                history.location.pathname !=="/resume/download" &&
                     <Typography variant="h6" color="inherit" noWrap>
                         <Link to="/">
-                            RESUME BUILDER
+                            {'HOME  '}
                         </Link>
                     </Typography>
-                    {history.location.pathname !=="/resume" && 
-                    <Button className={classes.btn} color="secondary"  >  <Link to="/resume">  DOWNLOAD RESUME    </Link></Button>
-                    }
+                }
+                {
+                    history.location.pathname !=="/resume" &&
+                    <Typography variant="h6" color="inherit" noWrap>
+                        <Link to="/resume">
+                            {'  CREATE'}
+                        </Link>
+                    </Typography>
+                }
+                {
+                    history.location.pathname !=="/resume/download" && 
+                    <Button className={classes.btn} color="secondary"  >  <Link to="/resume/download">  DOWNLOAD RESUME    </Link></Button>
+                }
                 </Toolbar>
             </AppBar>
         </div>

@@ -1,9 +1,10 @@
 .resumeScreen
 {
-    background: #FFFFFF;
+    background: #ffffff;
     width: 1080px;
     margin: auto;
     padding: 10px 20px;
+    color: #000000;
 }
 
 

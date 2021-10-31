@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+body{
+  background-color: white;
+color: white;
+font-size: xx-large;
+}
+table{
+  padding: 10px;
+  margin-left: 30%;
+  margin-top: 5%; 
+  box-shadow: beige 10px 20px 50px 0px;
+}
+.sl{
+  width: 97%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  background-color:chocolate;
+}
+a{
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+p{
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  margin-left: 35%;
+  margin-top: 2%;
+}
+#successfull{
+  margin-left: 20%;
+  color: white;
+}
+.link{
+  text-decoration: underline;
+}
+#username{
+  height:10%;
+  width:20%;
+  font-size: 20px;
+  position: absolute;
+  top:20px;
+  right:10px;
+  border:solid red;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: beige;
+  color: black;
+}
+button{
+  height: 50px;
+  width: 100px;
+  font-size: large;
+  margin-left: 400px;
+  margin-top: 20px;
+  border-radius: 10px 5px 3px 0px;
+  background-color: coral;
+  font-family: 'Open Sans', sans-serif;
+}
+input{
+  height:30px;
+  width:500px; 
+  border-radius: 5px 10px 10px 5px;
+}
+.Signup {
+  font-family: 'Open Sans', sans-serif;
+  background-size: auto;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
