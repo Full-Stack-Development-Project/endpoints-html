@@ -19,12 +19,12 @@ function UserInfo({user}) {
                         {user.alt_mobile && ", "} {user.alt_mobile && user.alt_mobile}
                     </p>
                 </div>
-                <di className="userInfo__email">
+                <div className="userInfo__email">
                     <p>
                       
                     <i className="fas fa-envelope"></i>
                         {user.email}  </p>
-                </di>
+                </div>
                 <div className="userInfo__address">
                       <p>
                         <i className="fas fa-map-marker-alt"></i>
