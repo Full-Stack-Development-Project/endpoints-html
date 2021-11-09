@@ -1,15 +1,11 @@
-
-
 .userInfo__name{
     font-size: 4rem;
     font-family: system-ui;
-    
     text-transform: capitalize;
-
 }
 
 .userInfo__second{
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -17,17 +13,14 @@
 .userInfo__mobile,.userInfo__email,.userInfo__address{
     display: flex;
     align-items: center;
-    /* grid-gap: 5px; */
     flex: 1;
     align-content: unset;
     max-width: 300px;
-    /* gap: 5px; */
     justify-content: end;
-        text-align: right;
+    text-align: right;
 }
 
 .userInfo__mobile > p> .fas ,.userInfo__email> p> .fas ,.userInfo__address > p> .fas{
-  
    font-size: 1.2rem;
     border-bottom: 2px solid;
     padding-bottom: 6px;
@@ -39,5 +32,5 @@
 }
 
 .userInfo__address{
-        max-width: 330px;
+    max-width: 330px;
 }

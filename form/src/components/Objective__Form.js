@@ -54,8 +54,6 @@ function Objective__Form({  nextStep, prevStep }) {
             payload: obj,
             
         });
-   
-        // calling  the next fucntion
         nextStep()
     };
 

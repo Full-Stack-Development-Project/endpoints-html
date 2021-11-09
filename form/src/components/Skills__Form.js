@@ -102,29 +102,21 @@ export default function Skills__Form({  nextStep, prevStep }) {
 
     const [{ }, dispatch] = useStateValue()
     const addUserSkill = () => {
-        // dispatch the item into data layer 
         dispatch({
             type: "ADD_USER_SKILL",
             payload: skill_state
         });
-        // nextStep()
     };
-
-
- 
 
     useEffect(() => {
         const skill_local = JSON.parse(localStorage.getItem("skill"))
-
         if (skill_local) {
-
             setSkill_state(skill_local)
         }
     }, [])
 
     return (
         <Container maxWidth="xs">
-
             <div className={classes.paper}>
                 <Typography
                     className={classes.logo}
@@ -138,9 +130,6 @@ export default function Skills__Form({  nextStep, prevStep }) {
                     </Avatar>
           Skills
         </Typography>
-               
-          
-
                 {skill_state.map((value, index) => (
 
                     <div key={index} style={{ marginBottom: 10 }}>
@@ -153,22 +142,17 @@ export default function Skills__Form({  nextStep, prevStep }) {
                                     <Typography className="">{value.skill_category}</Typography> :
                                     "Category"
                                 }
-
                             </AccordionSummary>
                             <AccordionDetails >
                                 <Grid container spacing={2}>
-
                                     <Grid item xs={12} sm={12}>
                                         <FormControl variant="outlined" fullWidth className={""}>
-
                                             <Select
                                                 native
                                                 value={value.skill_category}
                                                 onChange={e => handle_skillState_Change(e, index)}
-
                                                 inputProps={{
                                                     name: 'skill_category',
-
                                                 }}
                                             >
                                                 <option aria-label="" value="" />
@@ -177,7 +161,6 @@ export default function Skills__Form({  nextStep, prevStep }) {
                                                 <option value="Frameworks">Frameworks</option>
                                                 <option value="Tools">Tools</option>
                                                 <option value="Operating System">Operating System</option>
-
                                             </Select>
                                         </FormControl>
                                     </Grid>
@@ -185,25 +168,17 @@ export default function Skills__Form({  nextStep, prevStep }) {
                                         <TextField label="skill Name" variant="outlined" value={value.skill_name} name="skill_name" onChange={e => handle_skillState_Change(e, index)} fullWidth />
                                     </Grid>
                                 </Grid>
-                             
                             </AccordionDetails>
-
                             <Divider />
                             <AccordionActions>
-
                                 <Button size="small" color="primary" onClick={e => handleRemoveForm(index)}>
                                     Delete
                              </Button>
                             </AccordionActions>
                         </Accordion>
                     </div>
-
                 ))}
-
-
-
             </div>
-
             <div className={classes.btnFloat}>
                 <Button variant="contained" color="primary" onClick={prevStep}>
                     Back
@@ -214,12 +189,7 @@ export default function Skills__Form({  nextStep, prevStep }) {
                 <Button variant="contained" color="secondary" onClick={addUserSkill}>
                     save
                 </Button>
-
-                {/* <Button variant="contained" color="secondary" onClick={nextStep}>
-                    Next
-        </Button> */}
             </div>
-
         </Container>
     )
 }

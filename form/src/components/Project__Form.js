@@ -64,26 +64,11 @@ export default function Project_Form({  nextStep, prevStep }) {
     },
   ]);
 
-  // const addUserProject = () => {
-  //   // dispatch the item into data layer 
-  //   dispatch({
-  //     type: "ADD_USER_PROJECT",
-  //     payload: {
-  //       project: [...project_state]
-
-  //     },
-  //   });
-  //   console.log(" #### state Provider satae #####", state)
-  // };
-
   const handle_ProjectState_Change = (e, index) => {
     const { name, value } = e.target;
-
     const values = [...project_state];
-
     values[index][name] = value;
     setProject_state(values);
-
   };
 
   const handleAddForm = () => {
@@ -98,31 +83,22 @@ export default function Project_Form({  nextStep, prevStep }) {
       },
     ]);
   };
-
   const handleRemoveForm = (index) => {
     const values = [...project_state];
     values.splice(index, 1);
     setProject_state(values);
-
     dispatch({
       type: "ADD_USER_PROJECT",
       payload: values,
-
     });
   };
-
   const addUserProject = () => {
-
     dispatch({
       type: "ADD_USER_PROJECT",
       payload: project_state,
-
     });
-
-    // calling next
     nextStep()
   };
-
 
   useEffect(() => {
     const project_local = JSON.parse(localStorage.getItem("project"))
@@ -147,7 +123,6 @@ export default function Project_Form({  nextStep, prevStep }) {
           </Avatar>
           Project Details
         </Typography>
-
         {project_state.map((value, index) => (
           <div key={index} style={{ marginBottom: 10 }}>
             <Accordion>
@@ -161,8 +136,7 @@ export default function Project_Form({  nextStep, prevStep }) {
                   "App Name"
                 )}
               </AccordionSummary>
-                    <AccordionDetails>
-                        
+                    <AccordionDetails>   
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={12}>
                     <TextField
@@ -174,7 +148,6 @@ export default function Project_Form({  nextStep, prevStep }) {
                       fullWidth
                     />
                   </Grid>
-
                   <Grid item xs={12} sm={12}>
                     <TextField
                       label="Project Description"
@@ -185,10 +158,8 @@ export default function Project_Form({  nextStep, prevStep }) {
                       name="project_description"
                       onChange={(e) => handle_ProjectState_Change(e, index)}
                       fullWidth
-                     
                     />
                   </Grid>
-
                   <Grid item xs={12} sm={12}>
                     <TextField
                       label="Project Url"
@@ -197,47 +168,38 @@ export default function Project_Form({  nextStep, prevStep }) {
                       name="project_url"
                       onChange={(e) => handle_ProjectState_Change(e, index)}
                       fullWidth
-               
                     />
                   </Grid>
-               
-
                 <Grid item xs={6} sm={6}>
                   <TextField
                     id="date"
                     label="Project Start date"
                     type="date"
-                                    name="project_start_date"
-                             
+                    name="project_start_date"
                     value={value.project_start_date}
                     onChange={(e) => handle_ProjectState_Change(e, index)}
-                 
                     fullWidth
                     InputLabelProps={{
                       shrink: true,
                     }}
                   />
                 </Grid>
-
                 <Grid item xs={6} sm={6}>
                   <TextField
                     id="date"
                     label="Project Finish date"
                     type="date"
-                                    name="project_finish_date"
-                                    
+                    name="project_finish_date"                
                     value={value.project_finish_date}
                     onChange={(e) => handle_ProjectState_Change(e, index)}
-                
                     InputLabelProps={{
                       shrink: true,
                     }}
                     fullWidth
                   />
                 </Grid>
-                        </Grid>
+                </Grid>
               </AccordionDetails>
-
               <Divider />
               <AccordionActions>
                 <Button
@@ -259,16 +221,13 @@ export default function Project_Form({  nextStep, prevStep }) {
               <Fab size="small"  aria-label="add" onClick={handleAddForm}>
           <AddIcon />
         </Fab>
-
         <Button
-    
           variant="contained"
           color="secondary"
           onClick={addUserProject}
         >
           Save & Next
         </Button>
-       
       </div>
     </Container>
   );

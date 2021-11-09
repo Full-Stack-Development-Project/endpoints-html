@@ -35,7 +35,6 @@ function Educational({ educational }) {
                                             value.standard
                                             }
                                     </span> {" "}|  {value.marks_obtained} {" "} {value.marks_type === "Percentage" ? "%" : "CGPA"} </p>
-                                        {/* <p className="educational__course">{value.graduation_stream}</p> */}
                                     <p className="educational__schoolCollege">
                                         {value.schoolCollege}
                                         {", "}
@@ -46,10 +45,7 @@ function Educational({ educational }) {
                                         
                                         }
 
-                                   {value.school_college_state}
-                                       
-                                       
-                                      
+                                   {value.school_college_state}  
                                        </p>
                                     {value.boardUniversity && <p>
                                        ( <strong> {value.boardUniversity} </strong>)

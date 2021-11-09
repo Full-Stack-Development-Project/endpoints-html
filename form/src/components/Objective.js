@@ -2,7 +2,6 @@ import React from 'react'
 import './Objective.css';
 
 function Objective({ objective }) {
-    
     return (
         <div className="objective">
 
@@ -11,8 +10,6 @@ function Objective({ objective }) {
              <hr className="hr"/>
             </div>
             <div className="objective__second">
-                {/* <p>To succed in an environment of growth and excellence and earn a job which provides me job satisfaction and self-development and help me achieve personal as well as organisational goals.</p>
-                 */}
                 <p>{objective}</p>
               
             </div>

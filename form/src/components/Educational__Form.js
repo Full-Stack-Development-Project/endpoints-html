@@ -2,11 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
-
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
-// import Alert from '@material-ui/lab/Alert';
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -17,7 +14,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import CastForEducationIcon from '@material-ui/icons/CastForEducation';
-// ###########
+
 
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -93,9 +90,6 @@ function Educational__Form({  prevStep, nextStep }) {
             payload: educational_state,
 
         });
-
-
-        // calling next
         nextStep()
     };
     const educational_handleChange = (e, index) => {
@@ -135,14 +129,13 @@ function Educational__Form({  prevStep, nextStep }) {
       
 
         setEducational_state(values)
-        // localStorage.setItem("educational", JSON.stringify(values))
         dispatch({
             type: "REMOVE_USER_QUALIFICATION",
         
              payload: values,
         })
 
-        // localStorage.setItem("educational", JSON.stringify(state.educational))
+
     }
 
 
@@ -261,7 +254,6 @@ function Educational__Form({  prevStep, nextStep }) {
                                         </FormControl>
                                     </Grid>
 
-                                    {/*  #####################  */}
                                     {value.standard === "Graduation" && <>
                                         
                                         <Grid item xs={6} sm={6}>

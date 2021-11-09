@@ -1,10 +1,6 @@
 import React from 'react'
 import "./UserInfo.css"
 function UserInfo({user}) {
-
-    console.log("##### Userinfo state provider ####",user)
-
-
     return (
         <div className="userInfo">
             <div className="userInfo__first">
@@ -34,10 +30,8 @@ function UserInfo({user}) {
                             {user.pincode && user.pincode}  {user.pincode && ", "}
                             {user.state && user.state }
                         </span>
-                       
                   </p>
                 </div>
-
             </div>
         </div>
     )

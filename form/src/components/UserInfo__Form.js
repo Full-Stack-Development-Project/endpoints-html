@@ -58,7 +58,6 @@ function UserInfo__Form({ nextStep }) {
   const [{ }, dispatch] = useStateValue()
 
   const addUserInfo = () => {
-    // dispatch the item into data layer 
     dispatch({
       type: "ADD_USER_INFO",
       payload: {
@@ -74,9 +73,6 @@ function UserInfo__Form({ nextStep }) {
 
       },
     });
-
-  
-    // calling the next step
     nextStep()
   };
 
@@ -88,8 +84,6 @@ function UserInfo__Form({ nextStep }) {
       ...userState,
       [name]: value,
     });
-    // addUserInfo()
-
   };
 
  
