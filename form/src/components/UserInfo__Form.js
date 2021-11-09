@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
-
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -20,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "blue",
   },
   logo: {
     display: "flex",
@@ -42,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function UserInfo__Form({ nextStep }) {
-
   const initialState = {
     fullName: "",
     mobile: "",
@@ -53,6 +50,7 @@ function UserInfo__Form({ nextStep }) {
     pincode: "",
     state: "",
   }
+
   const [userState, setUserState] = useState(initialState);
 
   const [{ }, dispatch] = useStateValue()
@@ -61,7 +59,6 @@ function UserInfo__Form({ nextStep }) {
     dispatch({
       type: "ADD_USER_INFO",
       payload: {
-
         fullName: userState.fullName,
         mobile: userState.mobile,
         alt_mobile: userState.alt_mobile,
@@ -70,33 +67,24 @@ function UserInfo__Form({ nextStep }) {
         city: userState.city,
         pincode: userState.pincode,
         state: userState.state
-
       },
     });
     nextStep()
   };
 
-
   const handle_UserState_Change = (e) => {
     const { name, value } = e.target;
-
     setUserState({
       ...userState,
       [name]: value,
     });
   };
 
- 
-
- 
-
   const classes = useStyles();
 
   useEffect(() => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"))
-
     if (userInfo) {
-     
       setUserState(userInfo)
     }
   }, [])
@@ -158,7 +146,6 @@ function UserInfo__Form({ nextStep }) {
                 onChange={(e) => handle_UserState_Change(e)}
               />
             </Grid>
-
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
@@ -198,7 +185,6 @@ function UserInfo__Form({ nextStep }) {
                 onChange={(e) => handle_UserState_Change(e)}
               />
             </Grid>
-
             <Grid item xs={4} sm={4}>
               <TextField
                 variant="outlined"
@@ -224,13 +210,9 @@ function UserInfo__Form({ nextStep }) {
               />
             </Grid>
           </Grid>
-
-       
-
           <Button
             className={classes.btnFloat}
             variant="contained"
-            color="secondary"
             onClick={addUserInfo}
           >
             Save & Next

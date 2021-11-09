@@ -77,7 +77,7 @@ else{
           </Route>
           <Route path="/signup">
           <div className="Signup">
-            <h1 className="sl"> Signup</h1>
+            <h1 className="sl"> Signup <Link to="/">Home</Link></h1>
             <form onSubmit={submitForm}>
               <table>
                 <tbody>
@@ -103,7 +103,8 @@ else{
           </Route>
           <Route path="/login">
           <div className="Signup">
-            <h1 className="sl">LOGIN</h1>
+            <h1 className="sl"> LOGIN <Link to="/">Home</Link></h1>
+            
             <form onSubmit={submitLogin}>
             <table>
                 <tbody>

@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "blue",
   },
   logo: {
     display: "flex",
@@ -215,7 +215,9 @@ export default function Project_Form({  nextStep, prevStep }) {
         ))}
       </div>
       <div className={classes.btnFloat}>
-        <Button variant="contained" color="primary" onClick={prevStep}>
+        <Button 
+        variant="contained"  
+        onClick={prevStep}>
           Back
         </Button>
               <Fab size="small"  aria-label="add" onClick={handleAddForm}>
@@ -223,7 +225,6 @@ export default function Project_Form({  nextStep, prevStep }) {
         </Fab>
         <Button
           variant="contained"
-          color="secondary"
           onClick={addUserProject}
         >
           Save & Next

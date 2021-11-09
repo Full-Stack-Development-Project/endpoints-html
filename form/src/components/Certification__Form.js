@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "blue",
   },
   logo: {
     display: "flex",
@@ -206,13 +206,17 @@ export default function Certification__Form({
       </div>
 
       <div className={classes.btnFloat}>
-        <Button variant="contained" color="primary" onClick={prevStep}>
+        <Button 
+        variant="contained"  
+        onClick={prevStep}>
           Back
         </Button>
               <Fab aria-label="add" size="small" onClick={handleAddForm}>
           <AddIcon />
         </Fab>
-        <Button variant="contained" color="secondary" onClick={addUserCertification}>
+        <Button 
+        variant="contained" 
+        onClick={addUserCertification}>
           SAVE & Next
         </Button>
 

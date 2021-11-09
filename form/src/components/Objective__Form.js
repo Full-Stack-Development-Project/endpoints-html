@@ -3,7 +3,6 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
-
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "blue",
     },
     logo: {
         display: "flex",
@@ -109,7 +108,6 @@ function Objective__Form({  nextStep, prevStep }) {
                     <Button
                             className={classes.btnFloat}
                         variant="contained"
-                        color="primary"
                         onClick={prevStep}
                     >
                             Back
@@ -118,7 +116,6 @@ function Objective__Form({  nextStep, prevStep }) {
                         <Button
                             className={classes.btnFloat}
                             variant="contained"
-                            color="secondary"
                             onClick={addUserObjective}
                         >
                             Save & Next

@@ -1,10 +1,8 @@
 import { React, useEffect, useState } from "react"
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-
 import Grid from '@material-ui/core/Grid';
 import Avatar from "@material-ui/core/Avatar";
-
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from '@material-ui/core/TextField';
 import Fab from '@material-ui/core/Fab';
@@ -12,18 +10,14 @@ import AddIcon from '@material-ui/icons/Add';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionActions from '@material-ui/core/AccordionActions';
 import CodeIcon from '@material-ui/icons/Code';
 import Divider from '@material-ui/core/Divider';
-
-
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useStateValue } from "../store/StateProvider";
-
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -38,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "blue",
     },
     logo: {
         display: "flex",
@@ -180,13 +174,17 @@ export default function Skills__Form({  nextStep, prevStep }) {
                 ))}
             </div>
             <div className={classes.btnFloat}>
-                <Button variant="contained" color="primary" onClick={prevStep}>
+                <Button 
+                variant="contained" 
+                onClick={prevStep}>
                     Back
         </Button>
                 <Fab aria-label="add" size="small"  onClick={handleAddForm}>
                     <AddIcon />
                 </Fab>
-                <Button variant="contained" color="secondary" onClick={addUserSkill}>
+                <Button 
+                variant="contained" 
+                onClick={addUserSkill}>
                     save
                 </Button>
             </div>

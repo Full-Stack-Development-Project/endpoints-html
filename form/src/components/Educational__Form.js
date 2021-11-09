@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "blue",
     },
     logo: {
         display: "flex",
@@ -165,7 +165,7 @@ function Educational__Form({  prevStep, nextStep }) {
                      Educational Details
                 </Typography>
                 
-                <Alert severity="info"  className={classes.alert}>Recently Qualification must be listed at top !</Alert>
+                <Alert severity="info"  className={classes.alert}>Recent Qualifications must be listed at top</Alert>
       
                 {educational_state?.map((value, index) => (
 
@@ -300,7 +300,6 @@ function Educational__Form({  prevStep, nextStep }) {
                 <Button
        
                     variant="contained"
-                    color="primary"
                     onClick={prevStep}
                 >
                     Back
@@ -312,7 +311,6 @@ function Educational__Form({  prevStep, nextStep }) {
                 <Button
                    
                     variant="contained"
-                    color="secondary"
                     onClick={addUserQualification}
                 >
                     Save & Next

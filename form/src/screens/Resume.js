@@ -6,8 +6,6 @@ import Project__Form from "../components/Project__Form";
 import Skills__Form from "../components/Skills__Form";
 import UserInfo__Form from "../components/UserInfo__Form";
 import "./Resume.css";
-
-
 import { makeStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
@@ -41,8 +39,6 @@ const useStyles = makeStyles((theme) => ({
   stepper: {
       width: "100%",
       overflowX:"auto",
-    // marginLeft: theme.spacing(2),
-    // marginRight: theme.spacing(2),
       marginBottom:"-3rem",
     [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
       width: 600,
@@ -61,9 +57,8 @@ const useStyles = makeStyles((theme) => ({
     },
     },
     btn: {
-        position: "absolute",
-        right:"10px",
-      
+      position: "absolute",
+      right:"10px",     
   }
 }));
 
@@ -91,7 +86,6 @@ function Resume() {
 
   };
 
-  
   const handleEducationalForm = (value) => {
     setState({
       ...state,
@@ -102,12 +96,11 @@ function Resume() {
   const nextStep = (e) => {
     setStep(step + 1);
   };
-
+ 
   const prevStep = (e) => {
     setStep(step - 1);
   };
-
-
+ 
   function getComponentStep(step) {
     switch (step) {
       case 0:
@@ -116,16 +109,13 @@ function Resume() {
             nextStep={nextStep}
           />
         );
-
       case 1:
         return (
-          <Objective__Form
-           
+          <Objective__Form 
             nextStep={nextStep}
             prevStep={prevStep}
           />
         );
-
       case 2:
         return (
           <Educational__Form
@@ -134,47 +124,34 @@ function Resume() {
             prevStep={prevStep}
           />
         );
-
       case 3:
         return (
-          <Project__Form
-            
+          <Project__Form  
             nextStep={nextStep}
             prevStep={prevStep}
           />
         );
-
       case 4:
         return (
           <Certification__Form
-     
             nextStep={nextStep}
             prevStep={prevStep}
           />
         );
-
       case 5:
         return (
           <Skills__Form
-       
             nextStep={nextStep}
             prevStep={prevStep}
           />
         );
-
-
       default:
         break;
     }
   }
-
   const steps = getSteps();
-
     return (
       <>
-   
-
-
           <Stepper className={classes.stepper} activeStep={step} alternativeLabel>
             {steps.map((label,index) => (
               <Step key={label} onClick={()=>setStep(index)}>
@@ -182,11 +159,8 @@ function Resume() {
               </Step>
             ))}
           </Stepper>
-
-          {getComponentStep(step)}
-      
+          {getComponentStep(step)}     
             </>
   );
 }
-
 export default Resume;
